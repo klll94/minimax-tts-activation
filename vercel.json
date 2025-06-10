@@ -1,0 +1,24 @@
+{
+  "functions": {
+    "api/validate.py": {
+      "runtime": "python3.9"
+    },
+    "api/status.py": {
+      "runtime": "python3.9"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/validate",
+      "dest": "/api/validate.py"
+    },
+    {
+      "src": "/api/status", 
+      "dest": "/api/status.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+} 
