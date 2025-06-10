@@ -1,16 +1,7 @@
 {
   "name": "minimax-tts-activation",
   "version": "1.0.0",
-  "description": "MiniMax TTS 激活码管理系统",
-  "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'Build completed'",
-    "deploy": "vercel --prod"
-  },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   }
-} 
+}
