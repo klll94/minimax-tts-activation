@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "validate.js": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/validate",
+      "dest": "/validate.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+} 
