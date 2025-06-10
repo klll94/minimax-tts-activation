@@ -1,20 +1,18 @@
 {
-  "functions": {
-    "api/validate.py": {
-      "runtime": "@vercel/python"
+  "builds": [
+    {
+      "src": "api/*.py",
+      "use": "@vercel/python"
     },
-    "api/status.py": {
-      "runtime": "@vercel/python"
+    {
+      "src": "index.html", 
+      "use": "@vercel/static"
     }
-  },
+  ],
   "routes": [
     {
-      "src": "/api/validate",
-      "dest": "/api/validate.py"
-    },
-    {
-      "src": "/api/status", 
-      "dest": "/api/status.py"
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
     },
     {
       "src": "/(.*)",
